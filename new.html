@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Data Privacy in India</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron text-center bg-danger text-white">
+        <h1 class="display-4" style="font-weight: bold">
+          You fell for the trap!
+        </h1>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Your Details</h2>
+          <p class="card-text">First Name: <span id="firstNameData"></span></p>
+          <p class="card-text">Last Name: <span id="lastNameData"></span></p>
+          <p class="card-text">Phone No: <span id="phoneNumberData"></span></p>
+          <p class="card-text">Email: <span id="emailData"></span></p>
+          <p class="card-text">Slow down, You have entered crucial information which cannot be compromised! Always be <strong>cautious</strong> while entering any sensitive details (aadhaar number, bank account number, personnal information) 
+            . <br> Here you entered <br> Your tractor name: <span id="brandNameData"></span><br>Tractor rating:<span id="brandRatingData"></span> <br> Your tractor name, tractor rating (according to you) and many other details collected may be sold to third party companies.<br> This is just an analogy to understand what hackers can do with your details!</p>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">
+            Personal Data Awareness and Statistics in India
+          </h2>
+          <p>
+            It's important to be aware of how your personal data is being
+            collected, used, and shared. Here's some information and statistics
+            about personal data in India:
+          </p>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">What is personal data?</h2>
+          <p>
+            Personal data is any information that can be used to identify a
+            specific individual. This can include things like your name,
+            address, phone number, email address, and even your browsing history
+            and location data.
+          </p>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">How is personal data collected in India?</h2>
+          <p>
+            Personal data can be collected in a variety of ways, including
+            through online forms, cookies, and tracking technologies. It can
+            also be collected offline, such as through credit application forms
+            or government documents. In India, The Personal Data Protection
+            Bill, 2019 was passed in December 2019, which will soon be enforced
+            as a law.
+          </p>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Data Privacy in India</h2>
+          <p class="card-text">
+            India has recently passed the Personal Data Protection Bill, 2019,
+            which aims to regulate the collection, storage, and use of personal
+            data by companies and organizations. The bill establishes a Data
+            Protection Authority to enforce compliance and protect individuals'
+            rights to their personal data.
+          </p>
+          <p class="card-text">
+            According to a report by the Data Security Council of India, the
+            number of data breaches in India increased by
+            <span class="badge badge-danger">27%</span> in 2019, with financial
+            services and the government sector being the most affected.
+          </p>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Statistics on personal data in India</h2>
+          <ul>
+            <li>
+              According to a survey conducted by the Internet and Mobile
+              Association of India (IAMAI) in 2019, 81% of internet users in
+              India are concerned about their personal data being misused.
+            </li>
+            <li>
+              The number of data breaches in India has increased by over 150% in
+              the last two years, according to a report by the Data Security
+              Council of India (DSCI).
+            </li>
+            <li>
+              A report by the Centre for Internet and Society (CIS) found that
+              out of the top 100 websites in India, only 6 had a privacy policy
+              that was compliant with international standards.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Protecting your personal data</h2>
+          <p>
+            It's important to take steps to protect your personal data. Here are
+            a few things you can do:
+          </p>
+          <ul>
+            <li>
+              Be cautious about sharing personal information online, especially
+              on social media.
+            </li>
+            <li>
+              Check the privacy policies of websites and apps before using them.
+            </li>
+            <li>Use a VPN when accessing the internet on public Wi-Fi.</li>
+            <li>
+              Keep your software and devices up to date with the latest security
+              updates.
+            </li>
+          </ul>
+          <p>
+            By being aware of how your personal data is being collected and
+            used, and taking steps to protect it, you can help keep your
+            information safe.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var firstName = localStorage.getItem("firstName");
+      var lastName = localStorage.getItem("lastName");
+      var email = localStorage.getItem("email");
+      var phoneNumber = localStorage.getItem("phoneNumber");
+      var brandName = localStorage.getItem("brandName");
+      var brandRating = localStorage.getItem("brandRating");
+
+      document.getElementById("firstNameData").innerHTML = firstName;
+      document.getElementById("lastNameData").innerHTML = lastName;
+      document.getElementById("phoneNumberData").innerHTML = phoneNumber;
+      document.getElementById("emailData").innerHTML = email;
+      document.getElementById("brandNameData").innerHTML = brandName;
+      document.getElementById("brandRatingData").innerHTML = brandRating;
+    </script>
+  </body>
+</html>
