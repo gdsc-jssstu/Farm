@@ -26,7 +26,10 @@
           <p class="card-text">Phone No: <span id="phoneNumberData"></span></p>
           <p class="card-text">Email: <span id="emailData"></span></p>
           <p class="card-text">Slow down, You have entered crucial information which cannot be compromised! Always be <strong>cautious</strong> while entering any sensitive details (aadhaar number, bank account number, personnal information) 
-            . <br> Here you entered <br> Your tractor name: <span id="brandNameData"></span><br>Tractor rating:<span id="brandRatingData"></span> <br> Your tractor name, tractor rating (according to you) and many other details collected may be sold to third party companies.<br> This is just an analogy to understand what hackers can do with your details!</p>
+            . <br> Here you entered <br> Your tractor name: <span id="brandNameData"></span><br>Tractor rating:<span id="brandRatingData"></span> <br> Your tractor name, tractor rating (according to you) and many other details collected may be sold to third party companies.<br> This is just an analogy to understand what hackers can do with your details!
+            <br> <strong>Your ip address <p id="ip-address">ip address</p></strong>
+            <br> <strong>Your browser <p id="browser"> chrome </p></strong>
+          </p>
         </div>
       </div>
 
@@ -153,6 +156,54 @@
       document.getElementById("emailData").innerHTML = email;
       document.getElementById("brandNameData").innerHTML = brandName;
       document.getElementById("brandRatingData").innerHTML = brandRating;
+
+      //getting clinet ip address
+      fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('ip-address').innerHTML = data.ip;
+        console.log(data);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+
+ 
+
+    //getting browser info
+    getBrowserInfo();
+
+    function getBrowserInfo(){
+        let ua = navigator.userAgent.toLowerCase();
+
+        if(ua.indexOf('chrome') > -1){
+            document.getElementById('browser').innerHTML = 'Chrome';
+            console.log('Chrome');
+        }else if(ua.indexOf('safari') > -1){
+            document.getElementById('browser').innerHTML = 'Safari';
+            console.log('Safari');
+        }else if(ua.indexOf('firefox') > -1){
+            document.getElementById('browser').innerHTML = 'Firefox';
+            console.log('Firefox');
+        }else if(ua.indexOf('msie') > -1){
+            document.getElementById('browser').innerHTML = 'IE';
+            console.log('IE');
+        }else if(ua.indexOf('trident') > -1){
+            document.getElementById('browser').innerHTML = 'IE';
+            console.log('IE');
+        }else if(ua.indexOf('edge') > -1){
+            document.getElementById('browser').innerHTML = 'Edge';
+            console.log('Edge');
+        }else if(ua.indexOf('opera') > -1){
+            document.getElementById('browser').innerHTML = 'Opera';
+            console.log('Opera');
+        }else{
+           
+            console.log('Unknown');
+        }
+
+    }
+
     </script>
   </body>
 </html>
